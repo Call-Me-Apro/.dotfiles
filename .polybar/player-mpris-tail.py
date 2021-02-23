@@ -1,0 +1,1 @@
+/home/apro/.dotfiles/polybar/.polybar/player-mpris-tail.py
