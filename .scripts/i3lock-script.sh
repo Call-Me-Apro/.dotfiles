@@ -1,0 +1,1 @@
+/home/apro/.dotfiles/i3/.scripts/i3lock-script.sh
