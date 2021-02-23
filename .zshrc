@@ -1,0 +1,1 @@
+/home/apro/.dotfiles/zsh/.zshrc
