@@ -1,0 +1,10 @@
+* {
+    background:             #282a36;
+    foreground:             #f8f8f2;
+    background-alt:         #ff79c6;
+    search-background:      #bd93f9;
+    select:                 #44475a;
+    icon:                   #bd93f9;
+    icon-select:            #ff79c6;
+    border:                 #21222c;
+}

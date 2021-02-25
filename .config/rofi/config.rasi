@@ -1,0 +1,99 @@
+/** Basic config file **/
+
+configuration {
+  	font:							      "FiraCode Nerd Font Mono 12";
+    show-icons:             true;
+    icon-theme:             "La Capitaine";
+    modi:                   "window,drun,ssh,combi";
+    combi-modi:             "window,drun,ssh";
+    lines:                  12;
+    columns:                2;
+    width:                  40;
+    eh:                     2;
+    display-drun: 					"";
+    drun-display-format:    "{name}";
+    disable-history:        false;
+	  hide-scrollbar: 				true;
+	  sidebar-mode: 					false;
+}
+
+* {
+    background:             #282a36;
+    foreground:             #f8f8f2;
+    background-alt:         #ff79c6;
+    search-background:      #bd93f9;
+    select:                 #44475a;
+    icon:                   #bd93f9;
+    icon-select:            #ff79c6;
+    border:                 #21222c;
+}
+
+prompt
+{
+	padding: 5px;
+	background-color: @search-background;
+	text-color: @foreground;
+}
+
+entry
+{
+    background-color:               @search-background;
+    expand:                         false;
+    placeholder:                    "Search...";
+    padding:                        0.5% 0% 0% 0.5%;
+    blink:                          true;
+}
+
+inputbar
+{
+  background-color: @search-background;
+  children: 						          [ prompt, entry ];
+  expand:                         false;
+	border:							            0% 0% 0% 0%;
+  border-radius:                  0% 0% 0% 0%;
+    margin:                       0% 0% 0% 0%;
+    padding:                      1%;
+    position:                     center;
+}
+
+window {
+    transparency:         "real";
+	  background-color:     @background;
+    text-color:           @foreground;
+    border:							  1% 0.5% 1% 0.5%;
+    border-color:					@border;
+    border-radius:        0% 0% 0% 0%;
+}
+
+element-icon {
+    size:                           48px;
+    border:                         5px;
+}
+
+element-text {
+    expand:                         true;
+    horizontal-align:               0.0;
+    vertical-align:                 0.5;
+    margin:                         0.5% 1% 0% 1%;
+    text-color:                     @foreground;
+}
+
+listview {
+    background-color:               @background;
+    spacing:                        0%;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+element normal.normal {
+  background-color: @background;
+}
+
+element alternate.normal {
+  background-color: @background;
+}
+
+element selected.normal {
+	background-color: @select;
+}
