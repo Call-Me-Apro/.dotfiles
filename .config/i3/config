@@ -31,9 +31,9 @@ title_align center
 
 default_border pixel
 
-client.focused		#f09092 #f09092 #f09092 #f09092 #f09092
-client.focused_inactive	#e9415b #e9415b #e9415b #e9415b #e9415b
-client.unfocused	#e9415b #e9415b #e9415b #e9415b #e9415b
+client.focused		#ff79c6 #ff79c6 #ff79c6 #ff79c6 #ff79c6
+client.focused_inactive	#bd93f9 #bd93f9 #bd93f9 #bd93f9 #bd93f9
+client.unfocused	#bd93f9 #bd93f9 #bd93f9 #bd93f9 #bd93f9
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -65,7 +65,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start rofi
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 # lock screen
 bindsym $mod+q exec --no-startup-id /home/apro/.scripts/i3lock-script.sh
@@ -196,6 +196,6 @@ bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id picom -b -f --backend 'glx' --experimental-backends
 
-exec_always xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 1921x0 --rotate normal
+exec_always /home/apro/.screenlayout/jop.sh
 
 exec_always feh --bg-fill ~/.rice/flower-theme/wallpaper.jpg
