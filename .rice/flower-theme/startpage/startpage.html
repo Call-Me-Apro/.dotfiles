@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Apro's Startpage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/3e83218d10.css">
+</head>
+<body>
+  <div class="site">  
+
+
+    <h1 class="greetings text">Welcome back, <span class=lavender>Apro</span>!</h1>
+
+    <div id="clock"></div>
+
+    <div>
+      <form onsubmit="return search()">
+        <input class="input" placeholder="Search..." id='ddg'>
+        <button class="text" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <div>
+      <span id="button"><div class="y"></div><a href="https://www.youtube.com/" class="button text">YouTube</a></span>
+      <span id="button"><div class="t"></div><a href="https://www.twitter.com/" class="button text">Twitter</a></span>
+      <span id="button"><div class="r"></div><a href="https://www.reddit.com/" class="button text">Reddit</a></span>
+      <span id="button"><div class="g"></div><a href="https://www.github.com/" class="button text">GitHub</a></span>
+      <span id="button"><div class="a"></div><a href="https://wiki.archlinux.org/" class="button text">ArchWiki</a></span>
+    </div>
+
+
+  </div>
+
+
+
+<!--                 JS Scripts                -->
+
+
+
+  <script type="text/javascript">
+    function GetClock(){
+      var d=new Date();
+      var nhour=d.getHours(),nmin=d.getMinutes(),nsec=d.getSeconds();
+      if(nhour<=9) nhour="0"+nhour;
+      if(nmin<=9) nmin="0"+nmin;
+      if(nsec<=9) nsec="0"+nsec;
+      
+      var clocktext=nhour+"<span class=\"lavender\">:</span>"+nmin+"<span class=\"lavender\">:</span>"+nsec;
+      document.getElementById('clock').innerHTML=clocktext;
+      
+    }
+    GetClock();
+    setInterval(GetClock,1000);
+    function search(){search_term=document.getElementById('ddg').value;window.location.href="https://duckduckgo.com/?q="+encodeURI(search_term);return false;}
+  </script>
+
+
+
+</body>
+</html> 

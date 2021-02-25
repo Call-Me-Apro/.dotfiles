@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400&display=swap');
+
+body {
+    font-family:        'Fira Sans', sans-serif;
+    background-color:   #282a36;
+}
+
+
+
+/*           Utilities          */
+
+
+
+.site {
+    display:            flex;
+    flex-direction:     column;
+    flex-wrap:          nowrap;
+    align-items:        center;
+    justify-content:    space-evenly;
+    height:             100vh;
+    width:              100vw;
+}
+
+.text {
+    color:              #f8f8f2;
+    font-family:        'Fira Sans', sans-serif;
+    text-decoration:    none;
+    background-color:   rgba(0,0,0,0);
+    border-color:       rgba(0,0,0,0);
+    z-index:            1;
+    transition:         all 0.5s ease-out;
+    letter-spacing:     1px;
+}
+
+.lavender {
+    color:              #bd93f9;
+}
+
+
+
+/*       Welcome Text Size       */
+
+
+
+.greetings {
+    font-size:          5.333vh;
+}
+
+
+
+/*             Clock             */
+
+
+
+#clock {
+    font-family:        'Fira Code', monospace;
+    color:              #f8f8f2;
+    font-size:          12vh;
+    letter-spacing:     2vw;
+}
+
+
+
+/*           Search Bar          */
+
+
+
+.input {
+    border:             none;
+    outline:            none;
+    background:         #f8f8f2;
+    padding-right:      15px;
+    padding-left:       15px;
+    width:              40vw;
+    color:              #44475a;
+    font-size:          2.7vh;
+    border-radius:      2.5vh;
+    height:             5vh;
+    text-align:         center;
+}
+
+button > i.fa-search {
+    font-size:          24px;
+    cursor:             pointer;
+}
+
+
+
+/*            Buttons            */
+
+
+
+#button {
+    display:            inline-block;
+    position:           relative;
+    padding:            1.5vmin;
+    padding-bottom:     2.5vmin;
+    width:              9vw;
+    height:             33%;
+    margin:             0.5vw;
+    background:         #44475a;
+    overflow:           hidden;
+    z-index:            0;
+    font-size:          2vmax;
+    text-align:         center;
+}
+
+/* Button Bar and Animations */
+
+#button > div {
+    display:            block;
+    position:           absolute;
+    width:              100%;
+    height:             100%;
+    background-color:   #ff5555;
+    top:                90%;
+    left:               0%;
+    transition:         all 0.5s ease-out;
+    z-index:            -1;
+}
+#button:hover > div {
+    top:                0%;
+}
+
+#button:hover > .text {
+    color:               #000;
+}  
+
+/* Button Bar Colors*/
+
+#button > div.y /* YouTube */   {
+    background-color:   #ff5555;
+}
+#button > div.t /* Twitter */   {
+    background-color:   #8be9fd;
+}
+
+#button > div.r /* Reddit */    {
+    background-color:   #bd93f9;
+}
+
+#button > div.g /* GitHub */    {
+    background-color:   #f1fa8c;
+}
+
+#button > div.a /* Arch Wiki */ {
+    background-color:   #ff79c6;
+}
