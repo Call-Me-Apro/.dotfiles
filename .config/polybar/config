@@ -3,7 +3,7 @@
 ;
 ;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
 ;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝i
 ;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
 ;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
@@ -19,19 +19,19 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #bb282a36
-background-alt = #444
+background-alt = #bb44475a
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
-foreground-alt = #999
+foreground-alt = #bd93f9
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-monitor = ${env:MONITOR:HDMI1}
+monitor = ${env:MONITOR:HDMI-A-0}
 width = 100%
 height = 27
-radius = 6.0
+radius = 13.5
 fixed-center = true
 
 background = ${colors.background}
@@ -135,7 +135,7 @@ exec = ~/.polybar/player-mpris-tail.py --icon-playing '' --icon-paused '' 
 tail = true
 
 format = "<label>"
-format-underline = #e9415b
+format-underline = #ff79c6
 label = %output%
 label-padding = 1
 
@@ -143,7 +143,7 @@ label-padding = 1
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
-wrapping-scroll = false
+wrapping-scroll = fals
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -155,18 +155,18 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= #f09092
+label-focused-underline= #ff79c6
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-underline = #e9415b
+label-unfocused-underline = #bd93f9
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
-label-visible-underline = #f09092
+label-visible-underline = #ff79c6
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
@@ -294,13 +294,13 @@ label-muted =   muted
 label-muted-foreground = #666
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #e9415b
-bar-volume-foreground-1 = #e9415b
-bar-volume-foreground-2 = #e9415b
-bar-volume-foreground-3 = #e9415b
-bar-volume-foreground-4 = #e9415b
-bar-volume-foreground-5 = #f09092
-bar-volume-foreground-6 = #f09092
+bar-volume-foreground-0 = #bd93f9
+bar-volume-foreground-1 = #bd93f9
+bar-volume-foreground-2 = #bd93f9
+bar-volume-foreground-3 = #bd93f9
+bar-volume-foreground-4 = #bd93f9
+bar-volume-foreground-5 = #bd93f9
+bar-volume-foreground-6 = #ff79c6
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -322,13 +322,13 @@ format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = #bd93f9
+bar-volume-foreground-1 = #bd93f9
+bar-volume-foreground-2 = #bd93f9
+bar-volume-foreground-3 = #bd93f9
+bar-volume-foreground-4 = #bd93f9
+bar-volume-foreground-5 = #bd93f9
+bar-volume-foreground-6 = #ff79c6
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -439,4 +439,4 @@ screenchange-reload = true
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini
+; vim:ft=dosinie
