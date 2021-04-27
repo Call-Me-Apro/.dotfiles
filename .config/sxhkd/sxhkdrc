@@ -14,6 +14,14 @@ super + {_,shift + }d
 super + {_,shift + }r
 	{pkill -USR1 -x sxhkd,bspc wm -r}
 
+# take screenshot of selected area
+ctrl + Print
+	scrot -s -e 'xclip -selection clipboard -t image/png < $f && mv $f ~/.screenshots/' --line style=solid,mode=edge '%m_%d_%Y-%H.%M.%S-$wx$h.png'
+
+# take screenshot of focused monitor
+Print
+	/home/apro/.scripts/scrot/monitor-screenshot.sh
+
 #
 # bspwm hotkeys
 #
@@ -51,12 +59,12 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the other monitor
-super + Tab
-	bspc monitor -f next
+super + {_,shift +}Tab
+	bspc {monitor -f next,desktop -s last.active}
 
 # focus the next occupied workspace
-alt + Tab
-	bspc desktop -f next.occupied.local
+alt + {_,shift + }Tab
+	bspc desktop -f {next,prev}.occupied.local
 
 # focus/move node to a specific desktop
 super + {_,shift + }{plus,ecaron,scaron,ccaron,rcaron}
